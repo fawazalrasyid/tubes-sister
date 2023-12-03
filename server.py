@@ -33,7 +33,7 @@ def pendaftaran_pasien(data):
     # Perkiraan waktu antrean
     perkiraan_waktu = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time() + nomor_antrean * 15))
 
-    return f"Berhasil mendaftar di {klinik}, Nomor antrean : {nomor_antrean}. Perkiraan waktu antrean: {perkiraan_waktu}"
+    return f"Berhasil mendaftar di {klinik}, Nomor antrean : {nomor_antrean}. \nPerkiraan waktu antrean: {perkiraan_waktu}"
 
 # Fungsi untuk menangani koneksi dari setiap client
 def handle_client(client_socket):

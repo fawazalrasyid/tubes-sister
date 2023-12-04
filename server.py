@@ -6,16 +6,19 @@ import time
 data_antrean = {}
 
 # Database untuk klinik yang buka
-data_klinik = {"Klinik Mata", "Klinik Gigi", "Klinik Anak"}
+data_klinik = {"Klinik Mata", "Klinik Gigi", "Klinik Umum"}
+
+# Database untuk jam buka dan tutup klinik
+# jadwal_klinik = {
+   #"Klinik Umum": {"buka": 08.00, "tutup": 23.00},
+    #"Klinik Mata": {"buka": 09.00, "tutup": 22.00},
+    #"Klinik Gigi": {"buka": 08.00, "tutup": 22.00},
+#}
 
 # Fungsi untuk proses pendaftaran pasien
 def pendaftaran_pasien(data):
     klinik, nomor_rekam_medis, nama, tanggal_lahir = data.split("|")
     
-    # Memeriksa apakah klinik valid
-    if klinik not in data_klinik:
-        return f"{klinik} tidak buka atau tidak valid."
-
     # Membuat nomor antrian
     if klinik not in data_antrean:
         data_antrean[klinik] = []
